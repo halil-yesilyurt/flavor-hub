@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+:root {
+  --light-color: #e90064;
+  --dark-color: #b3005e;
+  --dark-blue: #1812a5;
+  --light-green:#16FF00;
+  --green: #BFDB38;
+  --main-color: #666;
+  --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+html {
+  font-family: 'Golos Text', sans-serif;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+/* header start */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: #fff;
+  -webkit-box-shadow: 2px 2px 5px 0.4px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 2px 2px 5px 0.4px rgba(0, 0, 0, 0.8);
+  box-shadow: 2px 2px 5px 0.4px rgba(0, 0, 0, 0.8);
+  position: sticky;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+header nav a {
+  font-size: 1.6rem;
+  color: var(--main-color);
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.7rem;
+}
+header nav a.active,
+header nav a:hover {
+  transition: all ease-in 0.2s;
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.header-logo img {
+  border-radius: 2rem;
+  width: 60px;
+}
+.header-logo h1{
+  font-family: 'Tilt Prism', cursive;
+  color: #309bcc;
+  letter-spacing: .4rem;
+  line-height: 1.5;
+  font-size: 3rem;
+}
+.header-icons {
+  display: flex;
+  gap: 0.6rem;
+}
+.header-icons i, .header-icons a {
+  background-color: #eee;
+  border-radius: 50%;
+  padding: 0.6rem;
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-blue);
+  transition: .4s all ease-in;
+}
+.header-icons i:hover, .header-icons a:hover,
+.header-icons i:focus, .header-icons a:focus{
+  background-color: var(--green);
+  color: #fff;
+  font-size: 1.7rem;
+  transform: rotate(360deg);
+}
+/* header end */
+/* slider start */
+
+/* slider end */

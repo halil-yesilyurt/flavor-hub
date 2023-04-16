@@ -221,22 +221,45 @@ header nav a:hover {
 }
 /* slider end */
 /* meal start */
-#meal {
+section:not(.slider){
   max-width: 1450px;
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
+  background: #fff;
+}
+#meal {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #fff;
 }
-.meal-title {
+
+/* .meal-title {
   color: var(--ternary);
   text-transform: uppercase;
   font-size: 3rem;
   font-family: var(--secondary-font);
   font-weight: 900;
+} */
+.title{
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 3.5rem;
+  color: #080808;
+  position: relative;
+  width: max-content;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+.title::before,
+.title::after{
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #c50000;
+  border-top: 1px solid #c50000;
+  height: 2px;
+  background-color:#f8f8f8;
 }
 #meal h5 {
   font-size: 2.4rem;
@@ -370,5 +393,57 @@ header nav a:hover {
   box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
   transform: translateY(-2px);
 }
-
 /* meal end */
+/* menu start */
+
+#menu .title{
+  margin: 0 auto 3rem;
+}
+#menu .menu-subtext{
+  text-align: left;
+  font-size: 1.4rem;
+  font-family: var(--quaternary-font);
+  color: #EE6F57;
+  text-transform: uppercase;
+}
+#menu .menu-subtext:last-child{
+  text-align: right;
+}
+.menu-wrapper{
+  margin: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px,1fr));
+  gap: 6rem;
+}
+.menu-wrapper .menu h5{
+  font-size: 4rem;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+}
+.menu ul{
+  list-style: none;
+  margin-top: 1rem;
+}
+.menu ul li{
+  position: relative;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4rem;
+  color: #155D1F;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1.5rem;
+}
+.menu ul li b{
+  font-size: 2rem;
+}
+.menu ul li::before{
+  content: "\f219";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  font-size: 1.2rem;
+  position: absolute;
+  left: -1.5rem;
+}
+/* menu end */

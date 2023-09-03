@@ -221,11 +221,11 @@ header nav a:hover {
 }
 /* slider end */
 /* meal start */
-section:not(.slider){
+section:not(.slider) {
   max-width: 1450px;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 5rem 2rem;
   background: #fff;
 }
 #meal {
@@ -241,9 +241,9 @@ section:not(.slider){
   font-family: var(--secondary-font);
   font-weight: 900;
 } */
-.title{
+.title {
   text-align: center;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: 300;
   font-size: 3.5rem;
   color: #080808;
@@ -251,15 +251,16 @@ section:not(.slider){
   width: max-content;
   text-transform: uppercase;
   margin: 0 auto;
+  font-weight: 600;
 }
 .title::before,
-.title::after{
-  content: " ";
+.title::after {
+  content: ' ';
   display: block;
   border-bottom: 1px solid #c50000;
   border-top: 1px solid #c50000;
   height: 2px;
-  background-color:#f8f8f8;
+  background-color: #f8f8f8;
 }
 #meal h5 {
   font-size: 2.4rem;
@@ -268,10 +269,10 @@ section:not(.slider){
   text-align: center;
 }
 .meal-wrapper {
-  margin: 5rem auto;
+  margin: 5rem auto 0;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   column-gap: 7rem;
   row-gap: 3rem;
   justify-items: center;
@@ -291,7 +292,7 @@ section:not(.slider){
   width: 270px;
 }
 
-.meal-wrapper .meal .meal-icon{
+.meal-wrapper .meal .meal-icon {
   position: absolute;
   width: 3.4rem;
   height: 3.4rem;
@@ -299,14 +300,14 @@ section:not(.slider){
   font-size: 1.5rem;
   color: #145374;
   top: 1rem;
-  background: #F6F5F5;
+  background: #f6f5f5;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all .2s linear;
+  transition: all 0.2s linear;
 }
-.meal-wrapper .meal .meal-icon:hover{
-  color: #F6F5F5;
+.meal-wrapper .meal .meal-icon:hover {
+  color: #f6f5f5;
   background: #145374;
 }
 .meal-wrapper .meal .fa-heart {
@@ -316,28 +317,28 @@ section:not(.slider){
   right: -10rem;
 }
 .meal-wrapper .meal:hover .fa-heart {
-  left: .8rem;
+  left: 0.8rem;
 }
 .meal-wrapper .meal:hover .fa-eye {
-  right: .8rem;
+  right: 0.8rem;
 }
 
 .meal-wrapper .meal img {
   height: 22rem;
   margin: 0 0 1rem;
   border-radius: 50%;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
   aspect-ratio: 1;
   object-fit: cover;
 }
 .meal-wrapper .meal:hover {
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  transition: .6s ease-in-out;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  transition: 0.6s ease-in-out;
 }
 .meal-wrapper .meal:hover img {
   transform: scale(1.2) rotate(12deg);
 }
-.meal-wrapper .meal h3{
+.meal-wrapper .meal h3 {
   text-transform: capitalize;
   font-size: 2rem;
   font-family: var(--quaternary-font);
@@ -345,40 +346,40 @@ section:not(.slider){
   color: #08413c;
   margin-top: 1rem;
 }
-.meal-wrapper .stars{
+.stars {
   display: flex;
   align-items: center;
-  gap: .2rem;
+  gap: 0.2rem;
 }
-.meal-wrapper .stars i{
+.stars i {
   font-size: 1.6rem;
-  color: #66E1B4;
+  color: #66e1b4;
 }
-.price-card-wrapper{
+.price-card-wrapper {
   display: flex;
   justify-content: space-around;
   width: 100%;
   align-items: center;
 }
-.meal-wrapper .price{
+.meal-wrapper .price {
   font-family: 'Poppins', sans-serif;
   font-size: 1.7rem;
   color: #010a43c2;
   font-weight: 600;
 }
-.meal-wrapper .meal:nth-child(2n) .price-card-wrapper .btn{
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+.meal-wrapper .meal:nth-child(2n) .price-card-wrapper .btn {
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
 }
-.price-card-wrapper .btn{
+.price-card-wrapper .btn {
   background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
   /* background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%); */
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
   display: flex;
   font-size: 1.3rem;
   justify-content: center;
-  padding: .7rem 1rem;
+  padding: 0.7rem 1rem;
   text-decoration: none;
   border: 0;
   cursor: pointer;
@@ -386,64 +387,180 @@ section:not(.slider){
   -webkit-user-select: none;
   touch-action: manipulation;
   text-transform: capitalize;
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 .price-card-wrapper .btn:hover {
   /* background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%); */
-  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
   transform: translateY(-2px);
 }
 /* meal end */
 /* menu start */
 
-#menu .title{
-  margin: 0 auto 3rem;
+#menu .title {
+  margin: 0 auto 4rem;
 }
-#menu .menu-subtext{
+#menu .menu-subtext {
   text-align: left;
   font-size: 1.4rem;
   font-family: var(--quaternary-font);
-  color: #EE6F57;
+  color: #ee6f57;
   text-transform: uppercase;
 }
-#menu .menu-subtext:last-child{
+#menu .menu-subtext:last-child {
   text-align: right;
 }
-.menu-wrapper{
+.menu-wrapper {
   margin: 4rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 6rem;
 }
-.menu-wrapper .menu h5{
+.menu-wrapper .menu h5 {
   font-size: 4rem;
   font-family: 'Dancing Script', cursive;
   text-align: center;
 }
-.menu ul{
+.menu ul {
   list-style: none;
   margin-top: 1rem;
 }
-.menu ul li{
+.menu ul li {
   position: relative;
   font-family: 'Dancing Script', cursive;
   font-size: 2.4rem;
-  color: #155D1F;
+  color: #155d1f;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-left: 1.5rem;
 }
-.menu ul li b{
+.menu ul li b {
   font-size: 2rem;
 }
-.menu ul li::before{
-  content: "\f219";
+.menu ul li::before {
+  content: '\f219';
   font-weight: 900;
-  font-family: "Font Awesome 6 Free";
+  font-family: 'Font Awesome 6 Free';
   font-size: 1.2rem;
   position: absolute;
   left: -1.5rem;
 }
 /* menu end */
+/* recipe start */
+.recipe-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.recipe-wrapper ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 48%;
+}
+.recipe-wrapper .recipe {
+  list-style: none;
+}
+.recipe-wrapper .recipe.active {
+  transition: 4.3s all ease;
+}
+.recipe-wrapper .recipe input {
+  display: none;
+}
+.recipe-wrapper .recipe label {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+.recipe-wrapper .recipe label::before {
+  content: '+';
+  margin-right: 1rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.recipe-wrapper .recipe .content {
+  resize: none;
+  height: 0;
+  padding: 0 1rem;
+  transition: height 0.5s, padding 0.5s;
+  overflow: hidden;
+  width: 100%;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.1rem;
+}
+.recipe-wrapper .recipe.active .content{
+  min-height: 80px;
+  height: max-content;
+}
+.recipe-wrapper .recipe.active label::before{
+  content: '-';
+}
+/* recipe end */
+/* review start */
+.review-wrapper{
+  margin: 5rem auto 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.review-card{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  border: .1rem solid rgba(0, 0, 0, .2);
+  border-radius: .5rem;
+  position: relative;
+  font-family: var(--secondary-font);
+  gap: 1.5rem;
+}
+.customer{
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: repeat(2,max-content);
+  column-gap: 1.3rem;
+}
+.customer .fa-quote-right{
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  font-size: clamp(3rem,5.4vw,6rem);
+  color: #6663;
+}
+.customer img{
+  width: 100px;
+  grid-row: 1/-1;
+  border-radius: 50%;
+}
+.customer h3{
+  align-self: flex-end;
+  font-size: 2rem;
+  color: var(--dark-blue);
+}
+.customer .stars{
+  align-items: flex-start;
+  margin-top: 0.5rem;
+}
+.review-card p{
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+}
+/* review end */
+
+

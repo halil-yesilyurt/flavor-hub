@@ -266,16 +266,16 @@
     <section id="recipe">
       <h2 class="title">Recipe</h2>
       <div class="recipe-wrapper">
-        <ul>
-          <li class="recipe active">
-            <input type="radio" name="accordion" />
+        <ul class="recipe">
+          <li>
+            <input type="radio" name="accordion" checked />
             <label for="burrata">Burrata with croutons and nettle and basil pesto</label>
             <p class="content">
               8 very thin slices ciabatta, ideally stale, Olive oil to fry and drizzle, 6-8 burrata (depending on servings), 25g nettles, 25g pine nuts, 1 garlic clove, roughly chopped, 25g parmesan, 1 tsp lemon juice, Tiny pinch chilli flakes, 25g basil, plus plenty of extra leaves to serve, 70ml
               olive oil
             </p>
           </li>
-          <li class="recipe">
+          <li>
             <input type="radio" name="accordion" />
             <label for="salad">Mediterranean feta pasta salad</label>
             <p class="content">
@@ -283,7 +283,7 @@
               (we like gordal), halved, 10g fresh oregano, leaves picked, 200g block feta cheese
             </p>
           </li>
-          <li class="recipe">
+          <li>
             <input type="radio" name="accordion" />
             <label for="cheesecake">Almond and apricot cheesecake</label>
             <p class="content">
@@ -291,7 +291,7 @@
               apricots, 3 tbsp amaretto
             </p>
           </li>
-          <li class="recipe">
+          <li>
             <input type="radio" name="accordion" />
             <label for="lasagne">Summer vegetable lasagne</label>
             <p class="content">
@@ -299,7 +299,7 @@
               basil leaves, torn, plus extra to garnish, 375g mozzarella (drained weight), roughly torn, 150g parmesan or vegetarian equivalent, coarsely grated
             </p>
           </li>
-          <li class="recipe">
+          <li>
             <input type="radio" name="accordion" />
             <label for="tart">Gooseberry and white chocolate frangipane tart</label>
             <p class="content">
@@ -308,34 +308,6 @@
             </p>
           </li>
         </ul>
-        <!-- <ul class="recipe">
-                <li>
-                    <input type="radio" name="accordion" checked>
-                    <label for="burrata">Burrata with croutons and nettle and basil pesto</label>
-                    <p class="content">8 very thin slices ciabatta, ideally stale, Olive oil to fry and drizzle, 6-8 burrata (depending on servings), 25g nettles, 25g pine nuts, 1 garlic clove, roughly chopped, 25g parmesan, 1 tsp lemon juice, Tiny pinch chilli flakes, 25g basil, plus plenty of extra leaves to serve, 70ml olive oil
-                    </p>
-                </li>
-                <li>
-                    <input type="radio" name="accordion">
-                    <label for="salad">Mediterranean feta pasta salad</label>
-                    <p class="content">300g dried pasta (we used mafalda corta), 2 tbsp extra-virgin olive oil, plus extra to drizzle, 50g sun-dried tomatoes in oil, plus 2 tbsp of the oil, Juice 1 lemon, 1 tsp honey, 1 small red onion, halved and finely sliced, 2 medium tomatoes, cut into wedges, 100g large, pitted olives (we like gordal), halved, 10g fresh oregano, leaves picked, 200g block feta cheese</p>
-                </li>
-                <li>
-                    <input type="radio" name="accordion">
-                    <label for="cheesecake">Almond and apricot cheesecake</label>
-                    <p class="content">250g amaretti biscuits, crushed, 80g unsalted butter, melted, 500g full-fat cream cheese, 100g soured cream, 150g almond butter, 200g demerara sugar, 4 medium free-range eggs, 2 tbsp amaretto, 2 tbsp cornflour, 300g soured cream, 4 tbsp caster sugar, 1 cinnamon stick, 200g dried apricots, 3 tbsp amaretto</p>
-                </li>
-                <li>
-                    <input type="radio" name="accordion">
-                    <label for="lasagne">Summer vegetable lasagne</label>
-                    <p class="content">60ml olive oil for brushing, 2 medium aubergines, ends trimmed and cut lengthways into 5mm slices, 3 medium courgettes, ends trimmed and cut lengthways into 5mm slices, 400g fresh lasagne sheets, 360g jar flame roasted or chargrilled peppers, drained and cut into thick strips, 12-14 basil leaves, torn, plus extra to garnish, 375g mozzarella (drained weight), roughly torn, 150g parmesan or vegetarian equivalent, coarsely grated</p>
-                </li>
-                <li>
-                    <input type="radio" name="accordion">
-                    <label for="tart">Gooseberry and white chocolate frangipane tart</label>
-                    <p class="content">160g plain flour, plus extra to dust, ¼ tsp table salt, 80g unsalted butter, chilled and chopped, plus extra to grease, 1 medium free-range egg, Splash ice cold water (optional), 125g unsalted butter, softened, 125g soft light brown sugar, 1 medium free-range egg, 125g ground almonds, ½ tsp vanilla extract, 200g gooseberries, 30g runny honey, 20g white chocolate</p>
-                </li>
-            </ul> -->
       </div>
     </section>
 
@@ -347,13 +319,13 @@
             <i class="fa-solid fa-quote-right"></i>
             <img src="img/customer-1.jpg" alt="Sarah Johnson" />
             <h3>Sarah Johnson</h3>
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
-              </div>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
           </div>
           <p>
             Flavor Hub is a fantastic restaurant with a diverse menu that caters to all tastes. The steak I had was cooked to perfection and had incredible flavor. The service was top-notch, and the staff was attentive and friendly. My only suggestion would be to add a few more vegetarian options to
@@ -364,43 +336,62 @@
           <div class="customer">
             <i class="fa-solid fa-quote-right"></i>
             <img src="img/customer-2.jpg" alt="Michael Brown" />
-              <h3>Michael Brown</h3>
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
+            <h3>Michael Brown</h3>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
           </div>
           <p>
-            I can't say enough good things about Flavor Hub! The food was absolutely delicious, and the presentation was impressive. The calamari appetizer was tender and perfectly seasoned, and the seafood pasta was a culinary masterpiece. The staff was knowledgeable and helpful in recommending dishes. It was a delightful evening, and I'll definitely be back for more!
+            I can't say enough good things about Flavor Hub! The food was absolutely delicious, and the presentation was impressive. The calamari appetizer was tender and perfectly seasoned, and the seafood pasta was a culinary masterpiece. The staff was knowledgeable and helpful in recommending
+            dishes. It was a delightful evening, and I'll definitely be back for more!
           </p>
         </div>
         <div class="review-card">
           <div class="customer">
             <i class="fa-solid fa-quote-right"></i>
             <img src="img/customer-3.jpg" alt="Emily Smith" />
-              <h3>Emily Smith</h3>
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
-              </div>
+            <h3>Emily Smith</h3>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
           </div>
-          <p>I had a lovely time at Flavor Hub. The ambiance was cozy and welcoming. The chicken burger I ordered was juicy and flavorful, and the garlic parmesan fries were the perfect accompaniment. I deducted one star because the service was a bit slow, but the overall experience was still enjoyable. I would recommend this restaurant for a casual and tasty meal.
+          <p>
+            I had a lovely time at Flavor Hub. The ambiance was cozy and welcoming. The chicken burger I ordered was juicy and flavorful, and the garlic parmesan fries were the perfect accompaniment. I deducted one star because the service was a bit slow, but the overall experience was still
+            enjoyable. I would recommend this restaurant for a casual and tasty meal.
           </p>
         </div>
-        
       </div>
     </section>
 
-
+    <section id="contact">
+      <h2 class="title">Contact</h2>
+      <div class="contact-wrapper">
+        <div class="get-touch">
+          <h4 class="get-touch-head">Get in touch with us</h4>
+          <h5 class="get-touch-subhead">We're here to help and would love to hear from you! Please use the form to get in touch, and we'll respond as soon as possible.</h5>
+        </div>
+        <div class="contact-form">
+          <div class="form-wrapper">
+            <input class="input input-element" name="Name" placeholder="Name" />
+            <input class="input input-element" name="Contact Number" placeholder="Contact Number" />
+            <input class="input input-element" name="Email" placeholder="Email" />
+            <textarea class="input textinput input-element" placeholder="Message"></textarea>
+            <button class="button">Send</button>
+          </div>
+          
+        </div>
+      </div>
+    </section>
     
-
-    <script src='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/35f4be6c78.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
   </body>

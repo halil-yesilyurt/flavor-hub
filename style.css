@@ -32,6 +32,7 @@ html {
   font-size: 62.5%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
 }
 /* header start */
 header {
@@ -244,7 +245,6 @@ section:not(.slider) {
 .title {
   text-align: center;
   font-family: 'Raleway', sans-serif;
-  font-weight: 300;
   font-size: 3.5rem;
   color: #080808;
   position: relative;
@@ -496,16 +496,17 @@ section:not(.slider) {
   font-family: 'Dancing Script', cursive;
   font-size: 2.1rem;
 }
-.recipe-wrapper .recipe.active .content{
+.recipe-wrapper .recipe.active .content {
   min-height: 80px;
   height: max-content;
 }
-.recipe-wrapper .recipe.active label::before{
+.recipe-wrapper .recipe.active label::before {
   content: '-';
 }
+
 /* recipe end */
 /* review start */
-.review-wrapper{
+.review-wrapper {
   margin: 5rem auto 0;
   width: 100%;
   display: flex;
@@ -513,54 +514,128 @@ section:not(.slider) {
   justify-content: space-between;
   gap: 2rem;
 }
-.review-card{
+.review-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 2rem;
   box-shadow: var(--box-shadow);
-  border: .1rem solid rgba(0, 0, 0, .2);
-  border-radius: .5rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
   position: relative;
   font-family: var(--secondary-font);
   gap: 1.5rem;
 }
-.customer{
+.customer {
   display: grid;
   grid-template-columns: max-content 1fr;
-  grid-template-rows: repeat(2,max-content);
+  grid-template-rows: repeat(2, max-content);
   column-gap: 1.3rem;
 }
-.customer .fa-quote-right{
+.customer .fa-quote-right {
   position: absolute;
   right: 1rem;
   top: 0;
-  font-size: clamp(3rem,5.4vw,6rem);
+  font-size: clamp(3rem, 5.4vw, 6rem);
   color: #6663;
 }
-.customer img{
+.customer img {
   width: 100px;
   grid-row: 1/-1;
   border-radius: 50%;
 }
-.customer h3{
+.customer h3 {
   align-self: flex-end;
   font-size: 2rem;
   color: var(--dark-blue);
 }
-.customer .stars{
+.customer .stars {
   align-items: flex-start;
   margin-top: 0.5rem;
 }
-.review-card p{
+.review-card p {
   font-size: 1.5rem;
   line-height: 1.8;
   color: var(--secondary);
   display: -webkit-box;
   -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;  
+  -webkit-box-orient: vertical;
   overflow: hidden;
 }
 /* review end */
+/* contact start */
+#contact .icon-block svg {
+  width: 100%;
+  height: 100%;
+}
+#contact .icon-block {
+  width: 30px;
+  height: 30px;
+}
+#contact .contact-wrapper {
+  width: 100%;
+  margin: 5rem auto 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  font-family: var(--quaternary-font);
+}
+#contact .get-touch-head {
+  font-size: 3.5rem;
+  line-height: 1.4;
+  margin: 0 0 24px;
+  font-weight: normal;
+}
+#contact .get-touch-subhead {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  color: #7e7e7e;
+  font-weight: normal;
+}
+#contact .contact-form .input {
+  font-family: var(--quaternary-font);
+}
+#contact .input {
+  width: 100%;
+  height: 40px;
+  margin: 0 0 1.5rem 0;
+  border-radius: 5px;
+  border-image: initial;
+  padding: 0.1rem 1.6rem;
+  font-size: 1.4rem;
+  background-color: #f8edeb;
+}
+#contact .textinput {
+  width: 100%;
+  height: 125px;
+  margin-bottom: 2.7rem;
+  padding: 1.6rem;
+  resize: vertical;
+}
+#contact .input:hover,
+#contact .input:focus {
+  outline: 1px solid #767676;
+}
+#contact .input:focus {
+  outline-width: 2px;
+}
+#contact .button {
+  height: 40px;
+  min-width: 170px;
+  font-size: 1.6rem;
+  color: white;
+  margin: 0 0 6rem;
+  background-color: #457b9d;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+#contact .button:hover,
+#contact .button:focus {
+  background-color: #0096c7;
+}
+#contact .form-wrapper {
+  border-bottom: 4px solid #f8edeb;
+  margin: 0 0 6rem;
+}
 
-
+/* contact end */

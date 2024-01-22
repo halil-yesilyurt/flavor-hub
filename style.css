@@ -129,7 +129,7 @@ header #menu-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 9rem 2rem;
+  padding: clamp(3rem, 0.75vw, 9rem) clamp(1rem, 1.9vw, 2rem);
   flex-direction: row-reverse;
   gap: 1rem;
 }
@@ -137,30 +137,30 @@ header #menu-bar {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 2rem;
+  gap: clamp(1rem, 1.8vw, 2rem);
   max-width: 700px;
 }
 .slider-wrapper .text span {
   display: block;
-  font-size: 6.5rem;
+  font-size: clamp(4rem, 5vw, 6.5rem);
   color: #309bcc;
   font-family: var(--ternary-font);
 }
 .slider-wrapper .text h2 {
   color: var(--primary);
-  font-size: 3.2rem;
+  font-size: clamp(1.6px, 3vw, 3.2rem);
   background: transparent;
   text-align: right;
 }
 .slider-wrapper .text p {
   font-family: var(--secondary-font);
-  font-size: 1.6rem;
+  font-size: clamp(1.2rem, 1.2vw, 1.6rem);
   text-align: right;
 }
 .slider-wrapper .btn-wrapper {
   display: flex;
   align-items: center;
-  gap: 1.8rem;
+  gap: clamp(1rem, 1.4vw, 1.8rem);
 }
 .slider-wrapper .text button {
   background-color: #c2fbd7;
@@ -170,8 +170,8 @@ header #menu-bar {
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 0.7rem 2rem;
-  font-size: 1.5rem;
+  padding: 0.7rem clamp(1rem, 1.7vw, 2rem);
+  font-size: clamp(1.2rem, 1.2vw, 1.5rem);
   border-radius: 10rem;
   box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset, rgba(44, 187, 99, 0.15) 0 1px 2px,
     rgba(44, 187, 99, 0.15) 0 2px 4px, rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
@@ -708,6 +708,7 @@ section:not(.slider) {
 @media only screen and (max-width: 768px) {
   header #menu-bar {
     display: flex;
+    order: 1;
   }
   header nav {
     position: absolute;
@@ -736,15 +737,19 @@ section:not(.slider) {
   .header-logo img {
     width: 34px;
   }
-  .header-logo h1{
+  .header-logo h1 {
     font-size: 1.6rem;
   }
-  .header-logo{
+  .header-logo {
     margin: 0 0.2rem;
     flex-wrap: wrap;
     justify-content: center;
   }
-  header{
-    padding: 1rem .2rem;
+  header {
+    padding: 1rem 0.2rem;
+  }
+  .slider-wrapper{
+    flex-wrap: wrap;
+    gap: 2rem;
   }
 }

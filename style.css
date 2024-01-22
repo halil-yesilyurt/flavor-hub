@@ -39,7 +39,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 1rem clamp(1rem, 2.5vw, 3rem);
   background: #fff;
   -webkit-box-shadow: 2px 2px 5px 0.4px rgba(0, 0, 0, 0.8);
   -moz-box-shadow: 2px 2px 5px 0.4px rgba(0, 0, 0, 0.8);
@@ -58,9 +58,9 @@ header nav {
   gap: 0.4rem;
 }
 header nav a {
-  font-size: 1.6rem;
+  font-size: clamp(1.4rem, 1.1vw, 1.6rem);
   color: var(--secondary);
-  padding: 0.7rem 1.2rem;
+  padding: 0.7rem clamp(0.7rem, 1vw, 1.2rem);
   border-radius: 0.7rem;
 }
 header nav a.active,
@@ -77,28 +77,32 @@ header nav a:hover {
 }
 .header-logo img {
   border-radius: 2rem;
-  width: 60px;
+  width: clamp(46px, 5vw, 60px);
 }
 .header-logo h1 {
   font-family: var(--ternary-font);
   color: #309bcc;
   letter-spacing: 0.4rem;
   line-height: 1.5;
-  font-size: 3rem;
+  font-size: clamp(2.3rem, 2.5vw, 3rem);
 }
 .header-icons {
   display: flex;
   gap: 0.6rem;
+}
+header #menu-bar {
+  display: none;
 }
 .header-icons i,
 .header-icons a {
   background-color: #eee;
   border-radius: 50%;
   padding: 0.6rem;
-  width: 4rem;
-  height: 4rem;
+  width: clamp(3rem, 3.3vw, 4rem);
+  height: auto;
+  aspect-ratio: 1;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: clamp(1.3rem, 1.2vw, 1.5rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,7 +115,7 @@ header nav a:hover {
 .header-icons a:focus {
   background-color: var(--green);
   color: #fff;
-  font-size: 1.7rem;
+  font-size: clamp(1.4rem, 1.3vw, 1.7rem);
   transform: rotate(360deg);
 }
 /* header end */
@@ -700,3 +704,47 @@ section:not(.slider) {
 }
 
 /* footer end */
+/* queries */
+@media only screen and (max-width: 768px) {
+  header #menu-bar {
+    display: flex;
+  }
+  header nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: all 0.2s linear;
+    flex-direction: column;
+  }
+  header nav a {
+    display: block;
+    padding: 1rem;
+    margin: 0.4rem;
+    background: #eee;
+    width: 50%;
+  }
+  header nav.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+@media only screen and (max-width: 450px) {
+  .header-logo img {
+    width: 34px;
+  }
+  .header-logo h1{
+    font-size: 1.6rem;
+  }
+  .header-logo{
+    margin: 0 0.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  header{
+    padding: 1rem .2rem;
+  }
+}

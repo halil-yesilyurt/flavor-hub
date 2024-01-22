@@ -245,7 +245,7 @@ section:not(.slider) {
 .title {
   text-align: center;
   font-family: 'Raleway', sans-serif;
-  font-size: clamp(2.3rem,3vw,3.5rem);
+  font-size: clamp(2.3rem, 3vw, 3.5rem);
   color: #080808;
   position: relative;
   width: max-content;
@@ -263,7 +263,7 @@ section:not(.slider) {
   background-color: #f8f8f8;
 }
 #meal h5 {
-  font-size: clamp(1.7rem,2vw,2.4rem);
+  font-size: clamp(1.7rem, 2vw, 2.4rem);
   font-family: 'Dancing Script', cursive;
   color: #a3bdcc;
   text-align: center;
@@ -289,16 +289,16 @@ section:not(.slider) {
   overflow: hidden;
   position: relative;
   gap: 1rem;
-  width: clamp(230px,22.5vw,270px);
+  width: clamp(230px, 22.5vw, 270px);
 }
 
 .meal-wrapper .meal .meal-icon {
   position: absolute;
-  width: clamp(3rem,3vw,3.4rem);
+  width: clamp(3rem, 3vw, 3.4rem);
   height: auto;
   aspect-ratio: 1;
   border-radius: 50%;
-  font-size: clamp(1.3rem,1.2vw,1.5rem);
+  font-size: clamp(1.3rem, 1.2vw, 1.5rem);
   color: #145374;
   top: 1rem;
   background: #f6f5f5;
@@ -325,7 +325,7 @@ section:not(.slider) {
 }
 
 .meal-wrapper .meal img {
-  height: clamp(14rem,2vw,22rem);
+  height: clamp(14rem, 2vw, 22rem);
   margin: 0 0 1rem;
   border-radius: 50%;
   transition: 0.5s ease-in-out;
@@ -341,7 +341,7 @@ section:not(.slider) {
 }
 .meal-wrapper .meal h3 {
   text-transform: capitalize;
-  font-size: clamp(1.4rem,1.8vw,2rem);
+  font-size: clamp(1.4rem, 1.8vw, 2rem);
   font-family: var(--quaternary-font);
   text-align: center;
   color: #08413c;
@@ -353,7 +353,7 @@ section:not(.slider) {
   gap: 0.2rem;
 }
 .stars i {
-  font-size: clamp(1.3rem,1.2vw,1.6rem);
+  font-size: clamp(1.3rem, 1.2vw, 1.6rem);
   color: #66e1b4;
 }
 .price-card-wrapper {
@@ -364,7 +364,7 @@ section:not(.slider) {
 }
 .meal-wrapper .price {
   font-family: 'Poppins', sans-serif;
-  font-size: clamp(1.3rem,1.4vw,1.7rem);
+  font-size: clamp(1.3rem, 1.4vw, 1.7rem);
   color: #010a43c2;
   font-weight: 600;
 }
@@ -378,9 +378,9 @@ section:not(.slider) {
   box-sizing: border-box;
   color: #ffffff;
   display: flex;
-  font-size: clamp(1.2rem,1vw,1.3rem);
+  font-size: clamp(1.2rem, 1vw, 1.3rem);
   justify-content: center;
-  padding: clamp(.4rem,.5vw,0.7rem) clamp(.5rem,1vw,1rem);
+  padding: clamp(0.4rem, 0.5vw, 0.7rem) clamp(0.5rem, 1vw, 1rem);
   text-decoration: none;
   border: 0;
   cursor: pointer;
@@ -397,13 +397,12 @@ section:not(.slider) {
 }
 /* meal end */
 /* menu start */
-
 #menu .title {
-  margin: 0 auto 4rem;
+  margin: 0 auto clamp(2rem, 3.5vw, 4rem);
 }
 #menu .menu-subtext {
   text-align: left;
-  font-size: 1.4rem;
+  font-size: clamp(1.2rem, 1.1vw, 1.4rem);
   font-family: var(--quaternary-font);
   color: #ee6f57;
   text-transform: uppercase;
@@ -412,13 +411,17 @@ section:not(.slider) {
   text-align: right;
 }
 .menu-wrapper {
-  margin: 4rem 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  gap: 6rem;
+  margin: clamp(2rem, 3.4vw, 4rem) 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+.menu-wrapper .menu {
+  width: clamp(300px, 29.2vw, 350px);
 }
 .menu-wrapper .menu h5 {
-  font-size: 4rem;
+  font-size: clamp(2.6rem, 3.4vw, 4rem);
   font-family: 'Dancing Script', cursive;
   text-align: center;
 }
@@ -429,7 +432,7 @@ section:not(.slider) {
 .menu ul li {
   position: relative;
   font-family: 'Dancing Script', cursive;
-  font-size: 2.4rem;
+  font-size: clamp(1.6rem, 2vw, 2.4rem);
   color: #155d1f;
   margin-bottom: 1rem;
   display: flex;
@@ -438,13 +441,14 @@ section:not(.slider) {
   margin-left: 1.5rem;
 }
 .menu ul li b {
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 1.8vw, 2rem);
+  margin-left: 4px;
 }
 .menu ul li::before {
   content: '\f219';
   font-weight: 900;
   font-family: 'Font Awesome 6 Free';
-  font-size: 1.2rem;
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
   position: absolute;
   left: -1.5rem;
 }
@@ -466,7 +470,7 @@ section:not(.slider) {
   gap: 1rem;
 }
 #recipe .title {
-  margin: 0 auto 4rem;
+  margin: 0 auto clamp(2rem, 3.5vw, 4rem);
 }
 .recipe-wrapper .recipe {
   list-style: none;
@@ -478,16 +482,16 @@ section:not(.slider) {
 .recipe-wrapper .recipe label {
   display: flex;
   align-items: center;
-  padding: 1rem;
-  font-size: 1.8rem;
+  padding: clamp(0.5rem, 0.9vw, 1rem);
+  font-size: clamp(1.3rem, 1.4vw, 1.8rem);
   cursor: pointer;
   font-weight: 500;
   border: 3px solid #3e474f;
 }
 .recipe-wrapper .recipe label::before {
   content: '+';
-  margin-right: 1rem;
-  font-size: 2.4rem;
+  margin-right: clamp(0.2rem, 0.9vw, 1rem);
+  font-size: clamp(1.6rem, 2vw, 2.4rem);
   font-weight: 600;
 }
 .recipe-wrapper .recipe .content {
@@ -496,9 +500,9 @@ section:not(.slider) {
   overflow: hidden;
   width: 100%;
   font-family: 'Dancing Script', cursive;
-  font-size: 2.1rem;
+  font-size: clamp(1.4rem, 2vw, 2.1rem);
   padding: 0 1rem;
-  margin-top: 1rem;
+  margin-top: clamp(0.2rem, 0.9vw, 1rem);
 }
 .recipe-wrapper .recipe input:checked ~ .content {
   transition: max-height, 1s;

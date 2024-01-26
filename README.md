@@ -1,6 +1,7 @@
 Welcome to Flavor Hub - your ultimate culinary destination for exquisite tastes. This project is a responsive website developed using HTML, CSS, and JavaScript, creating an immersive and user-friendly experience for food enthusiasts. The majority of the images and content have been generated with the assistance of AI tools, ensuring a visually appealing and diverse culinary showcase.
 
 ## Table of Contents
+
 [Features](#features)
 [Technologies Used](#technologies)
 [Installation](#installation)

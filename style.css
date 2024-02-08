@@ -34,6 +34,12 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 5.5rem;
 }
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+}
 /* header start */
 header {
   display: flex;
@@ -69,7 +75,6 @@ header nav a:hover {
   background-color: var(--ternary);
   color: #fff;
 }
-
 .header-logo {
   display: flex;
   align-items: center;
@@ -148,7 +153,7 @@ header #menu-bar {
 }
 .slider-wrapper .text h2 {
   color: var(--primary);
-  font-size: clamp(1.6px, 3vw, 3.2rem);
+  font-size: clamp(1.6rem, 3vw, 3.2rem);
   background: transparent;
   text-align: right;
 }
@@ -181,7 +186,6 @@ header #menu-bar {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-
 .slider-wrapper .text button:hover {
   background-color: #ffffff;
   box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset, rgba(44, 187, 99, 0.25) 0 1px 2px,
@@ -291,7 +295,6 @@ section:not(.slider) {
   gap: 1rem;
   width: clamp(230px, 22.5vw, 270px);
 }
-
 .meal-wrapper .meal .meal-icon {
   position: absolute;
   width: clamp(3rem, 3vw, 3.4rem);
@@ -323,7 +326,6 @@ section:not(.slider) {
 .meal-wrapper .meal:hover .fa-eye {
   right: 0.8rem;
 }
-
 .meal-wrapper .meal img {
   height: clamp(14rem, 2vw, 22rem);
   margin: 0 0 1rem;
@@ -475,7 +477,6 @@ section:not(.slider) {
 .recipe-wrapper .recipe {
   list-style: none;
 }
-
 .recipe-wrapper .recipe input {
   display: none;
 }
@@ -500,7 +501,7 @@ section:not(.slider) {
   overflow: hidden;
   width: 100%;
   font-family: 'Dancing Script', cursive;
-  font-size: clamp(1.4rem, 2vw, 2.1rem);
+  font-size: clamp(1.5rem, 2vw, 2.1rem);
   padding: 0 1rem;
   margin-top: clamp(0.2rem, 0.9vw, 1rem);
 }
@@ -651,6 +652,7 @@ section:not(.slider) {
   padding: clamp(1rem, 2.5vw, 3rem) 0px;
   font-family: var(--secondary-font);
   text-align: center;
+  margin-top: auto;
 }
 .footer .footer-row {
   width: 100%;
@@ -787,7 +789,7 @@ section:not(.slider) {
     flex-wrap: wrap;
     gap: 2rem;
   }
-  .footer .footer-row ul{
+  .footer .footer-row ul {
     flex-direction: column;
   }
 }

@@ -18,6 +18,8 @@
   --secondary-font: 'Raleway', sans-serif;
   --ternary-font: 'Tilt Prism', cursive;
   --quaternary-font: 'Chivo Mono', monospace;
+  
+  /* Modern color variables */
   --primary-color: #ff6b6b;
   --secondary-color: #4ecdc4;
   --background-color: #ffffff;
@@ -101,26 +103,20 @@ header nav {
 
 header nav a {
   font-size: clamp(1.4rem, 1.1vw, 1.6rem);
-  color: var(--text-color);
+  color: var(--secondary);
   padding: 0.7rem clamp(0.7rem, 1vw, 1.2rem);
   border-radius: 0.7rem;
-  position: relative;
+}
+
+header nav a.active,
+header nav a:hover {
+  transition: all ease-in 0.2s;
+  background-color: var(--ternary);
+  color: #fff;
 }
 
 header nav a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--primary-color);
-  transition: width var(--transition-speed);
-}
-
-header nav a.active::after,
-header nav a:hover::after {
-  width: 100%;
+  display: none;
 }
 
 .header-logo {
@@ -164,24 +160,41 @@ header #menu-bar {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-color);
-  transition: color var(--transition-speed);
+  color: var(--dark-blue);
+  transition: 0.4s all ease-in;
 }
 
 .header-icons i:hover,
 .header-icons a:hover,
 .header-icons i:focus,
 .header-icons a:focus {
-  color: var(--primary-color);
+  background-color: var(--green);
+  color: #fff;
+  font-size: clamp(1.4rem, 1.3vw, 1.7rem);
+  transform: rotate(360deg);
 }
 
 .theme-toggle {
-  background: none;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--primary-color);
+  border-radius: 50%;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
-  color: var(--text-color);
-  transition: transform var(--transition-speed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px var(--shadow-color);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.theme-toggle i {
+  color: #fff;
+  font-size: 1.8rem;
 }
 
 .theme-toggle:hover {
@@ -739,10 +752,17 @@ section:not(.slider) {
   height: clamp(36px, 3.4vw, 40px);
   margin: 0 0 clamp(0.8rem, 1.3vw, 1.5rem) 0;
   border-radius: 5px;
+  border: 1px solid #ddd;
   border-image: initial;
   padding: 0.1rem 1.6rem;
   font-size: clamp(1.2rem, 1.2vw, 1.4rem);
-  background-color: var(--surface-color);
+  background-color: #fff;
+}
+
+[data-theme="dark"] #contact .input {
+  background-color: #3a3a3a;
+  border-color: #555;
+  color: #fff;
 }
 
 #contact .textinput {
@@ -872,8 +892,17 @@ section:not(.slider) {
     border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
     padding: 1rem;
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    transition: all 0.2s linear;
+    transition: all 0.3s ease-in-out;
     flex-direction: column;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  [data-theme="dark"] header nav {
+    background-color: var(--surface-color);
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.4);
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.08);
   }
 
   header nav a {
@@ -882,6 +911,16 @@ section:not(.slider) {
     margin: 0.4rem;
     background: #eee;
     width: 50%;
+  }
+  
+  [data-theme="dark"] header nav a {
+    background: #3a3a3a;
+    color: #fff;
+  }
+  
+  [data-theme="dark"] header nav a.active,
+  [data-theme="dark"] header nav a:hover {
+    background-color: var(--primary-color);
   }
 
   header nav.active {
@@ -897,12 +936,12 @@ section:not(.slider) {
     justify-content: space-evenly;
     gap: 2rem;
   }
-
+  
   .meal-wrapper::-webkit-scrollbar {
     width: 6px;
     background-color: #f5f5f5;
   }
-
+  
   .meal-wrapper::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-image: -webkit-gradient(
@@ -914,16 +953,32 @@ section:not(.slider) {
       color-stop(0.86, rgb(28, 58, 148))
     );
   }
-
+  
   .meal-wrapper::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     background-color: #f5f5f5;
     border-radius: 10px;
   }
-
+  
+  [data-theme="dark"] .meal-wrapper::-webkit-scrollbar {
+    background-color: #2d2d2d;
+  }
+  
+  [data-theme="dark"] .meal-wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background-color: #2d2d2d;
+  }
+  
   #contact .contact-wrapper,
   .review-wrapper {
     flex-wrap: wrap;
+  }
+
+  .theme-toggle {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
   }
 }
 
@@ -954,6 +1009,17 @@ section:not(.slider) {
   .footer .footer-row ul {
     flex-direction: column;
   }
+
+  .theme-toggle {
+    bottom: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .theme-toggle i {
+    font-size: 1.5rem;
+  }
 }
 
 /* Dark Mode Specific Styles */
@@ -971,9 +1037,79 @@ section:not(.slider) {
 
 [data-theme="dark"] .header-icons i,
 [data-theme="dark"] .header-icons a {
-  color: var(--text-color);
+  background-color: #3a3a3a;
+  color: #78e0ff;
+}
+
+[data-theme="dark"] .header-icons i:hover,
+[data-theme="dark"] .header-icons a:hover {
+  background-color: var(--green);
+  color: #fff;
 }
 
 [data-theme="dark"] .theme-toggle {
   color: var(--text-color);
+}
+
+[data-theme="dark"] .customer h3 {
+  color: #78e0ff;
+}
+
+[data-theme="dark"] .menu ul li {
+  color: #6dff8e;
+}
+
+[data-theme="dark"] .meal-wrapper .price {
+  color: #ffd166;
+}
+
+[data-theme="dark"] .slider-wrapper .text h2,
+[data-theme="dark"] .slider-wrapper .text p {
+  color: #f8f9fa;
+}
+
+[data-theme="dark"] .slider-wrapper .text span {
+  color: #78e0ff;
+}
+
+[data-theme="dark"] .title {
+  color: #ffffff;
+}
+
+[data-theme="dark"] #meal h5 {
+  color: #a3bdcc;
+}
+
+[data-theme="dark"] .menu-wrapper .menu h5 {
+  color: #ffd166;
+}
+
+[data-theme="dark"] .menu ul li::before {
+  color: #6dff8e;
+}
+
+[data-theme="dark"] .recipe-wrapper .recipe label {
+  border-color: #555;
+  color: #ffffff;
+}
+
+[data-theme="dark"] .recipe-wrapper .recipe .content {
+  color: #b2bec3;
+}
+
+[data-theme="dark"] #contact .get-touch-head {
+  color: #ffffff;
+}
+
+[data-theme="dark"] #contact .get-touch-subhead {
+  color: #b2bec3;
+}
+
+[data-theme="dark"] #contact .button {
+  background-color: var(--primary-color);
+}
+
+[data-theme="dark"] #contact .button:hover,
+[data-theme="dark"] #contact .button:focus {
+  background-color: #ff8585;
 }

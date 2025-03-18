@@ -1,3 +1,8 @@
+document.addEventListener('DOMContentLoaded', () => {
+  initTheme();
+  initApp();
+});
+
 const navbar = document.querySelector('nav');
 const menuIcon = document.getElementById('menu-bar');
 const themeToggle = document.getElementById('theme-toggle');
@@ -23,6 +28,7 @@ navLinks.forEach((link) => {
 
 const setActiveNavOnScroll = () => {
   const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('nav a');
   let scrollPosition = window.scrollY + 100;
 
   sections.forEach((section) => {
@@ -43,42 +49,55 @@ const setActiveNavOnScroll = () => {
 
 window.addEventListener('scroll', setActiveNavOnScroll);
 window.addEventListener('load', setActiveNavOnScroll);
+window.addEventListener('resize', setActiveNavOnScroll);
 
 const initTheme = () => {
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const storedTheme = localStorage.getItem('theme');
+  try {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const storedTheme = localStorage.getItem('theme');
 
-  if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    themeIcon.classList.replace('fa-moon', 'fa-sun');
+    if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeIcon.classList.replace('fa-moon', 'fa-sun');
+    }
+  } catch (error) {
+    console.error('Error initializing theme:', error);
   }
 };
 
 const toggleTheme = () => {
-  const currentTheme = document.documentElement.getAttribute('data-theme');
-  const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  try {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
-  document.documentElement.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
 
-  if (newTheme === 'dark') {
-    themeIcon.classList.replace('fa-moon', 'fa-sun');
-  } else {
-    themeIcon.classList.replace('fa-sun', 'fa-moon');
+    if (newTheme === 'dark') {
+      themeIcon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+      themeIcon.classList.replace('fa-sun', 'fa-moon');
+    }
+  } catch (error) {
+    console.error('Error toggling theme:', error);
   }
 };
 
 themeToggle.addEventListener('click', toggleTheme);
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-  const newTheme = e.matches ? 'dark' : 'light';
-  document.documentElement.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme);
+  try {
+    const newTheme = e.matches ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
 
-  if (newTheme === 'dark') {
-    themeIcon.classList.replace('fa-moon', 'fa-sun');
-  } else {
-    themeIcon.classList.replace('fa-sun', 'fa-moon');
+    if (newTheme === 'dark') {
+      themeIcon.classList.replace('fa-moon', 'fa-sun');
+    } else {
+      themeIcon.classList.replace('fa-sun', 'fa-moon');
+    }
+  } catch (error) {
+    console.error('Error handling system theme change:', error);
   }
 });
 
@@ -102,7 +121,8 @@ const createStarRating = (rating) => {
 
 const loadMeals = async () => {
   try {
-    const response = await fetch('meals.json');
+    const response = await fetch('./meals.json');
+    if (!response.ok) throw new Error('Failed to load meals');
     const data = await response.json();
     const mealsContainer = document.querySelector('.meal-wrapper');
 
@@ -111,20 +131,20 @@ const loadMeals = async () => {
 
       data.meals.forEach((meal) => {
         mealsHTML += `
-                    <div class="meal">
-                        <a href="#" class="fa-solid fa-heart meal-icon"></a>
-                        <a href="#" class="fa-solid fa-eye meal-icon"></a>
-                        <img src="${meal.image}" alt="${meal.name.toLowerCase()}" />
-                        <h3>${meal.name}</h3>
-                        <div class="stars">
-                            ${createStarRating(meal.rating)}
-                        </div>
-                        <div class="price-card-wrapper">
-                            <span class="price">$${meal.price.toFixed(2)}</span>
-                            <a href="#" class="btn">add to cart</a>
-                        </div>
-                    </div>
-                `;
+          <div class="meal">
+            <a href="#" class="fa-solid fa-heart meal-icon"></a>
+            <a href="#" class="fa-solid fa-eye meal-icon"></a>
+            <img src="${meal.image}" alt="${meal.name.toLowerCase()}" />
+            <h3>${meal.name}</h3>
+            <div class="stars">
+              ${createStarRating(meal.rating)}
+            </div>
+            <div class="price-card-wrapper">
+              <span class="price">$${meal.price.toFixed(2)}</span>
+              <a href="#" class="btn">add to cart</a>
+            </div>
+          </div>
+        `;
       });
 
       mealsContainer.innerHTML = mealsHTML;
@@ -136,7 +156,8 @@ const loadMeals = async () => {
 
 const loadMenu = async () => {
   try {
-    const response = await fetch('menu.json');
+    const response = await fetch('./menu.json');
+    if (!response.ok) throw new Error('Failed to load menu');
     const data = await response.json();
     const menuContainer = document.querySelector('.menu-wrapper');
 
@@ -145,19 +166,19 @@ const loadMenu = async () => {
 
       data.categories.forEach((category) => {
         menuHTML += `
-                    <div class="menu">
-                        <h5>${category.name}</h5>
-                        <ul>
-                            ${category.items
-                              .map(
-                                (item) => `
-                                <li>${item.name}<b>$${item.price}</b></li>
-                            `
-                              )
-                              .join('')}
-                        </ul>
-                    </div>
-                `;
+          <div class="menu">
+            <h5>${category.name}</h5>
+            <ul>
+              ${category.items
+                .map(
+                  (item) => `
+                <li>${item.name}<b>$${item.price}</b></li>
+              `
+                )
+                .join('')}
+            </ul>
+          </div>
+        `;
       });
 
       menuContainer.innerHTML = menuHTML;
@@ -169,7 +190,8 @@ const loadMenu = async () => {
 
 const loadRecipes = async () => {
   try {
-    const response = await fetch('recipes.json');
+    const response = await fetch('./recipes.json');
+    if (!response.ok) throw new Error('Failed to load recipes');
     const data = await response.json();
     const recipesContainer = document.querySelector('.recipe-wrapper .recipe');
 
@@ -178,12 +200,12 @@ const loadRecipes = async () => {
 
       data.recipes.forEach((recipe, index) => {
         recipesHTML += `
-                    <li>
-                        <input type="radio" id="${recipe.id}" name="accordion" ${index === 0 ? 'checked' : ''} />
-                        <label for="${recipe.id}">${recipe.name}</label>
-                        <p class="content">${recipe.ingredients}</p>
-                    </li>
-                `;
+          <li>
+            <input type="radio" id="${recipe.id}" name="accordion" ${index === 0 ? 'checked' : ''} />
+            <label for="${recipe.id}">${recipe.name}</label>
+            <p class="content">${recipe.ingredients}</p>
+          </li>
+        `;
       });
 
       recipesContainer.innerHTML = recipesHTML;
@@ -195,7 +217,8 @@ const loadRecipes = async () => {
 
 const loadReviews = async () => {
   try {
-    const response = await fetch('reviews.json');
+    const response = await fetch('./reviews.json');
+    if (!response.ok) throw new Error('Failed to load reviews');
     const data = await response.json();
     const reviewsContainer = document.querySelector('.review-wrapper');
 
@@ -204,18 +227,18 @@ const loadReviews = async () => {
 
       data.reviews.forEach((review) => {
         reviewsHTML += `
-                    <div class="review-card">
-                        <div class="customer">
-                            <i class="fa-solid fa-quote-right"></i>
-                            <img src="${review.image}" alt="${review.name}" />
-                            <h3>${review.name}</h3>
-                            <div class="stars">
-                                ${createStarRating(review.rating)}
-                            </div>
-                        </div>
-                        <p>${review.text}</p>
-                    </div>
-                `;
+          <div class="review-card">
+            <div class="customer">
+              <i class="fa-solid fa-quote-right"></i>
+              <img src="${review.image}" alt="${review.name}" />
+              <h3>${review.name}</h3>
+              <div class="stars">
+                ${createStarRating(review.rating)}
+              </div>
+            </div>
+            <p>${review.text}</p>
+          </div>
+        `;
       });
 
       reviewsContainer.innerHTML = reviewsHTML;
@@ -226,11 +249,8 @@ const loadReviews = async () => {
 };
 
 const initApp = () => {
-  initTheme();
   loadMeals();
   loadMenu();
   loadRecipes();
   loadReviews();
 };
-
-document.addEventListener('DOMContentLoaded', initApp);

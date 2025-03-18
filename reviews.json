@@ -1,0 +1,22 @@
+{
+  "reviews": [
+    {
+      "name": "Sarah Johnson",
+      "image": "img/customer-1.jpg",
+      "rating": 4.5,
+      "text": "Flavor Hub is a fantastic restaurant with a diverse menu that caters to all tastes. The steak I had was cooked to perfection and had incredible flavor. The service was top-notch, and the staff was attentive and friendly. My only suggestion would be to add a few more vegetarian options to the menu. Overall, a delightful dining experience!"
+    },
+    {
+      "name": "Michael Brown",
+      "image": "img/customer-2.jpg",
+      "rating": 5,
+      "text": "I can't say enough good things about Flavor Hub! The food was absolutely delicious, and the presentation was impressive. The calamari appetizer was tender and perfectly seasoned, and the seafood pasta was a culinary masterpiece. The staff was knowledgeable and helpful in recommending dishes. It was a delightful evening, and I'll definitely be back for more!"
+    },
+    {
+      "name": "Emily Smith",
+      "image": "img/customer-3.jpg",
+      "rating": 4.5,
+      "text": "I had a lovely time at Flavor Hub. The ambiance was cozy and welcoming. The chicken burger I ordered was juicy and flavorful, and the garlic parmesan fries were the perfect accompaniment. I deducted one star because the service was a bit slow, but the overall experience was still enjoyable. I would recommend this restaurant for a casual and tasty meal."
+    }
+  ]
+} 

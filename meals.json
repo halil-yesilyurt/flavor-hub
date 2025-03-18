@@ -1,0 +1,74 @@
+{
+  "meals": [
+    {
+      "id": 1,
+      "name": "Spicy Wrap",
+      "image": "img/meal-1.jpeg",
+      "price": 16.99,
+      "rating": 3.5
+    },
+    {
+      "id": 2,
+      "name": "Smashed Cheeseburger",
+      "image": "img/meal-2.jpeg",
+      "price": 22.99,
+      "rating": 5
+    },
+    {
+      "id": 3,
+      "name": "California Pizza",
+      "image": "img/meal-3.jpeg",
+      "price": 25.99,
+      "rating": 4
+    },
+    {
+      "id": 4,
+      "name": "Chicken Alfredo",
+      "image": "img/meal-4.jpg",
+      "price": 18.99,
+      "rating": 4.5
+    },
+    {
+      "id": 5,
+      "name": "Classic Lasagna",
+      "image": "img/meal-5.jpg",
+      "price": 20.99,
+      "rating": 4
+    },
+    {
+      "id": 6,
+      "name": "Onion Soup",
+      "image": "img/meal-6.jpeg",
+      "price": 15.99,
+      "rating": 4.5
+    },
+    {
+      "id": 7,
+      "name": "Burrito",
+      "image": "img/meal-7.jpeg",
+      "price": 19.99,
+      "rating": 3.5
+    },
+    {
+      "id": 8,
+      "name": "Chicken Ramen",
+      "image": "img/meal-8.jpeg",
+      "price": 23.99,
+      "rating": 4
+    },
+    {
+      "id": 9,
+      "name": "Nigiri Sushi",
+      "image": "img/meal-9.jpeg",
+      "price": 25.99,
+      "rating": 4.5
+    },
+    {
+      "id": 10,
+      "name": "Puccia Sandwich",
+      "image": "img/meal-10.jpeg",
+      "price": 17.99,
+      "rating": 3.5
+    }
+  ]
+} 

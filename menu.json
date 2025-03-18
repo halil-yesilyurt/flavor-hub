@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "name": "Breakfast",
+      "items": [
+        {"name": "Eggs Benedict with canadian bacon", "price": 7},
+        {"name": "Pancake", "price": 6},
+        {"name": "Eggs & Bacon", "price": 5},
+        {"name": "Granola with yogurt", "price": 5},
+        {"name": "Belgian waffle", "price": 5}
+      ]
+    },
+    {
+      "name": "Dinner",
+      "items": [
+        {"name": "Crispy chicken with mango sauce", "price": 10},
+        {"name": "Fresh grilled beef", "price": 11},
+        {"name": "Tofu butternut curry", "price": 9},
+        {"name": "Poached eggs in avocado toasts", "price": 8},
+        {"name": "Charcoal grilled beef rib", "price": 8}
+      ]
+    },
+    {
+      "name": "Desert",
+      "items": [
+        {"name": "Tiramisu", "price": 8},
+        {"name": "Brownie", "price": 8},
+        {"name": "Raspberry cheesecake", "price": 9},
+        {"name": "Chocolate cake", "price": 7},
+        {"name": "Apple pie", "price": 7}
+      ]
+    }
+  ]
+} 

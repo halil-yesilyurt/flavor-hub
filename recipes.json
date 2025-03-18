@@ -1,0 +1,29 @@
+{
+  "recipes": [
+    {
+      "id": "burrata",
+      "name": "Burrata with croutons and nettle and basil pesto",
+      "ingredients": "8 very thin slices ciabatta, ideally stale, Olive oil to fry and drizzle, 6-8 burrata (depending on servings), 25g nettles, 25g pine nuts, 1 garlic clove, roughly chopped, 25g parmesan, 1 tsp lemon juice, Tiny pinch chilli flakes, 25g basil, plus plenty of extra leaves to serve, 70ml olive oil"
+    },
+    {
+      "id": "salad",
+      "name": "Mediterranean feta pasta salad",
+      "ingredients": "300g dried pasta (we used mafalda corta), 2 tbsp extra-virgin olive oil, plus extra to drizzle, 50g sun-dried tomatoes in oil, plus 2 tbsp of the oil, Juice 1 lemon, 1 tsp honey, 1 small red onion, halved and finely sliced, 2 medium tomatoes, cut into wedges, 100g large, pitted olives (we like gordal), halved, 10g fresh oregano, leaves picked, 200g block feta cheese"
+    },
+    {
+      "id": "cheesecake",
+      "name": "Almond and apricot cheesecake",
+      "ingredients": "250g amaretti biscuits, crushed, 80g unsalted butter, melted, 500g full-fat cream cheese, 100g soured cream, 150g almond butter, 200g demerara sugar, 4 medium free-range eggs, 2 tbsp amaretto, 2 tbsp cornflour, 300g soured cream, 4 tbsp caster sugar, 1 cinnamon stick, 200g dried apricots, 3 tbsp amaretto"
+    },
+    {
+      "id": "lasagne",
+      "name": "Summer vegetable lasagne",
+      "ingredients": "60ml olive oil for brushing, 2 medium aubergines, ends trimmed and cut lengthways into 5mm slices, 3 medium courgettes, ends trimmed and cut lengthways into 5mm slices, 400g fresh lasagne sheets, 360g jar flame roasted or chargrilled peppers, drained and cut into thick strips, 12-14 basil leaves, torn, plus extra to garnish, 375g mozzarella (drained weight), roughly torn, 150g parmesan or vegetarian equivalent, coarsely grated"
+    },
+    {
+      "id": "tart",
+      "name": "Gooseberry and white chocolate frangipane tart",
+      "ingredients": "160g plain flour, plus extra to dust, ¼ tsp table salt, 80g unsalted butter, chilled and chopped, plus extra to grease, 1 medium free-range egg, Splash ice cold water (optional), 125g unsalted butter, softened, 125g soft light brown sugar, 1 medium free-range egg, 125g ground almonds, ½ tsp vanilla extract, 200g gooseberries, 30g runny honey, 20g white chocolate"
+    }
+  ]
+} 

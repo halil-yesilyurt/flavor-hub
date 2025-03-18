@@ -1,5 +1,7 @@
 const navbar = document.querySelector("nav");
 const menuIcon = document.getElementById("menu-bar");
+const themeToggle = document.getElementById("theme-toggle");
+const themeIcon = themeToggle.querySelector("i");
 
 menuIcon.onclick = () => { 
     menuIcon.classList.toggle("fa-times");
@@ -7,32 +9,35 @@ menuIcon.onclick = () => {
 }
 
 const initTheme = () => {
-    const darkModeStored = localStorage.getItem('darkMode');
-    if (darkModeStored === 'true') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        themeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const storedTheme = localStorage.getItem("theme");
+    
+    if (storedTheme === "dark" || (!storedTheme && prefersDark)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+        themeIcon.classList.replace("fa-moon", "fa-sun");
     }
 };
 
 const toggleTheme = () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    const icon = themeToggle.querySelector('i');
+    const currentTheme = document.documentElement.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
     
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('darkMode', newTheme === 'dark');
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
     
-    if (newTheme === 'dark') {
-        icon.classList.replace('fa-moon', 'fa-sun');
+    if (newTheme === "dark") {
+        themeIcon.classList.replace("fa-moon", "fa-sun");
     } else {
-        icon.classList.replace('fa-sun', 'fa-moon');
+        themeIcon.classList.replace("fa-sun", "fa-moon");
     }
 };
 
-const themeToggle = document.createElement('div');
-themeToggle.className = 'theme-toggle';
-themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-themeToggle.addEventListener('click', toggleTheme);
-document.body.appendChild(themeToggle);
+themeToggle.addEventListener("click", toggleTheme);
 
 initTheme();
+
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+    const newTheme = e.matches ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+});

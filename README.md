@@ -6,12 +6,7 @@ Welcome to Flavor Hub - a modern, responsive restaurant website with dark mode s
 
 - Responsive design for all devices
 - Dark mode support with system preference detection
-- Interactive menu with filtering options
-- Dynamic recipe section with expandable steps
 - Customer reviews with star ratings
-- Contact form with validation
-- Social media integration
-
 - **Fully Responsive Design:** Flavor Hub is designed to provide an optimal viewing and interaction experience across a wide range of devices, from desktops to mobile phones.
 
 <p align="center">
